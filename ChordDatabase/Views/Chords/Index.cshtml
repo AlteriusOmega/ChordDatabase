@@ -1,0 +1,73 @@
+﻿@model IEnumerable<ChordDatabase.Models.Chord>
+<!--This thing above is a model, this is IEnumerable which is like a list-->
+
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>Index</h1>
+
+<p>
+    <a asp-action="Create">Create New</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Quality)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Extension)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Alterations)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Inversion)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Scale)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Functions)
+            </th>
+@*            <th>
+                @Html.DisplayNameFor(model => model.Feeling)
+            </th>*@
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Quality)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Extension)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Alterations)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Inversion)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Scale)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Functions)
+            </td>
+@*            <td>
+                @Html.DisplayFor(modelItem => item.Feeling)
+            </td>*@
+            <td>
+                <a asp-action="Edit" asp-route-id="@item.Id">Edit</a> |
+                <a asp-action="Details" asp-route-id="@item.Id">Details</a> |
+                <a asp-action="Delete" asp-route-id="@item.Id">Delete</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>

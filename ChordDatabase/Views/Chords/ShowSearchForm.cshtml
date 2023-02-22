@@ -1,0 +1,51 @@
+﻿
+<h4>Search for a chord</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="ShowSearchResults">
+
+
+            <div class="form-group">
+                <label for="Quality" class="control-label" required>Quality</label>
+                <input name="Quality" class="form-control" required />
+            </div>
+            <div class="form-group">
+                <label for="Extension" class="control-label">Extension</label>
+                <input name="Extension" class="form-control" />
+            </div>
+            <div class="form-group">
+                <label for="Alterations" class="control-label">Alterations</label>
+                <input name="Alterations" class="form-control" />
+            </div>
+                        <div class="form-group">
+                <label for="Inversion" class="control-label">Inversion</label>
+                <input name="Inversion" class="form-control" />
+            </div>
+            <div class="form-group">
+                <label for="Scale" class="control-label">Scale</label>
+                <input name="Scale" class="form-control" />
+            </div>
+            <div class="form-group">
+                <label for="Functions" class="control-label">Functions</label>
+                <input name="Functions" class="form-control" />
+            </div>
+            <div class="form-group">
+                <label for="Feeling" class="control-label">Feeling</label>
+                <input name="Feeling" class="form-control" />
+            </div>
+            <br />
+            <div class="form-group">
+                <input type="submit" value="Search" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index">Back to List</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

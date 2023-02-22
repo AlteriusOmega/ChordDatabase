@@ -1,0 +1,50 @@
+:root {
+    --navbar-color: #58198c;
+    --background-color: #f5f5e4;
+    --accent-color: #21dcd2;
+    --link-color: #b46fff;
+}
+*{
+    font-family: Futura !important;
+}
+h1{
+    font-size:3em;
+}
+a{
+    color: var(--link-color) !important;
+}
+
+#navbar {
+    background-color: var(--navbar-color);
+}
+
+.nav-link{
+    color:var(--accent-color) !important;
+}
+
+body {
+    margin-bottom: 60px;
+    background-color:var(--background-color);
+/*    font-size: 1.8em;*/
+}
+
+html {
+    font-size: 22px !important;
+    font-family:'Times New Roman', Times, serif !important;
+}
+
+@media (min-width: 768px) {
+  html {
+    font-size: 14px;
+  }
+}
+
+.btn:focus, .btn:active:focus, .btn-link.nav-link:focus, .form-control:focus, .form-check-input:focus {
+  box-shadow: 0 0 0 0.1rem white, 0 0 0 0.25rem #258cfb;
+}
+
+html {
+  position: relative;
+  min-height: 100%;
+}
+

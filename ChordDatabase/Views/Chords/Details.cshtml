@@ -1,0 +1,60 @@
+﻿@model ChordDatabase.Models.Chord
+
+@{
+    ViewData["Title"] = "Details";
+}
+
+<h1>Details</h1>
+
+<div>
+    <h4>Chord</h4>
+    <hr />
+    <dl class="row">
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Quality)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Quality)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Extension)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Extension)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Alterations)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Alterations)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Inversion)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Inversion)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Scale)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Scale)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Functions)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Functions)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Feeling)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Feeling)
+        </dd>
+    </dl>
+</div>
+<div>
+    <a asp-action="Edit" asp-route-id="@Model?.Id">Edit</a> |
+    <a asp-action="Index">Back to List</a>
+</div>
